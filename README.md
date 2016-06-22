@@ -1,4 +1,4 @@
-# GameDealBot
+# GameDealBot [![Build Status](https://travis-ci.org/kckaiwei/GameDealBot.svg?branch=master)](https://travis-ci.org/kckaiwei/GameDealBot)
 
 ##Description
 

@@ -1,4 +1,4 @@
-# GameDealBot [![Build Status](https://travis-ci.org/kckaiwei/GameDealBot.svg?branch=master)](https://travis-ci.org/kckaiwei/GameDealBot)
+# GameDealBot [![Build Status](https://travis-ci.org/kckaiwei/GameDealBot.svg?branch=master)](https://travis-ci.org/kckaiwei/GameDealBot) [![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?maxAge=2592000)]()
 
 ##Description
 

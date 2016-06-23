@@ -60,7 +60,7 @@ def email(title, url):
     server.sendmail(EMAIL_USERNAME, TO_ADDRESS, msg.as_string())
     server.quit()
     print "sent!"
- 
+
 if __name__ == "__main__":
     """Start of bot"""
     print "running"

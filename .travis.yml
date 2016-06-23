@@ -6,3 +6,16 @@ python:
 install: "pip install -r requirements.txt"
 # command to run tests
 script: nosetests
+
+deploy:
+    # test pypi
+  - provider: pypi
+    distributions: sdist
+    server: https://testpypi.python.org/pypi
+    user: "kckaiwei"
+    password:
+      secure: "sK8MG6zWjReckyJkfWTkYGoWdATeCgTQ1KaVMwqoUioOysMe1IWRFKXRKRu+4xlkBjwmLDelFcA5J/dLKE6TVJPgJ7Ne76ASzLZe/20XtclU/LY1QbWnbdYeQYOusuGIxQKaf97/K6/1jWLcN4lXe8AHzxkBOTkdlGYxHJsdipEIX2I5MDDZyYlAbHp47fv3EQKFkSRlI5hYxYw160cmvkmXQF0WdiZEK1HVtdNrv51B5XLkCqzgufJLyERzFPGkUJ30YB9petT7K4kNPGBgOrkEg3WJkekVIpD3u9OhByoYOhA+hgbrqdZ5PNCpdJ+rflJNpVNrrZ2S51BUz46t3J7xGFQFY+W9Ow3srdZFprjAKmFfgmMH23M9CoQ9sfU0U13RKcTY5A65JAuefAqtPEjrpv9OMvU6SVg54b6tu8LMyO4oisJxA/mPX36z5wb/x7ue4ZDKgnx6+dKOPI0P1LK29YRZ1aiQ4l+0fGcr3E2iiU+0wB34gbvi6lwd0PrJaTWMtD5cO+ZuSReJgNDPOk4/9v99D2gKbKVA2HTHGIRFbTu11o9cliu9zUwqQpExRrW7MLeakv8/NGUpS3txuweimHrVG7FPwDbhylbA0jgu9UHlT83iT4zqBoQEmni2pTZt0wn6zTrtDJA+Bu8zKAf1Wo2b8/J2JZZoK/NVjSE="
+    on:
+      branch: master
+      tags: false
+      condition: $TRAVIS_PYTHON_VERSION = "2.7"

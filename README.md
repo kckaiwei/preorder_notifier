@@ -1,7 +1,5 @@
 # GameDealBot [![Build Status](https://travis-ci.org/kckaiwei/GameDealBot.svg?branch=master)](https://travis-ci.org/kckaiwei/GameDealBot)
 
-[![PyPI](https://img.shields.io/pypi/dm/Django.svg?maxAge=2592000)](https://github.com/HewlettPackard/python-ilorest-library)
-
 ##Description
 
 GameDealBot is a python bot that utilizes your reddit account and email account to send you text message alerts when there are new deals. A reddit account, and an email account is necessary to use GameDealBot. I host my version of GameDealBot on heroku, utilizing the heroku scheduler to check every 10 minutes for updates, and texts me if there are.

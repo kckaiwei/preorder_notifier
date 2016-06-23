@@ -1,7 +1,6 @@
 import praw
 import os
 from config_bot import *
-from _codecs import encode
 
 def login():
     """Logins to reddit, returns praw.reddit"""

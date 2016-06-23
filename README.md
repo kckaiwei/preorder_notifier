@@ -43,3 +43,4 @@ Click the Heroku Scheduler title (it's a link) and it'll give you a new page whe
     python main.py
     
 This tells it to run our main python file. Keep the dyno size at free, and set frequency to 10 minutes, hit save and we're done!
+    

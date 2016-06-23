@@ -6,7 +6,7 @@ setup(name='GameDealBot',
 	  author = 'Kevin C.',
 	  author_email = 'kckaiwei@gmail.com',
       keywords='reddit bot',
-      url='https://github.com/HewlettPackard/python-ilorest-library',
+      url='https://github.com/kckaiwei/GameDealBot',
       install_requires=[
           'praw'
       ])

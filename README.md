@@ -1,4 +1,4 @@
-# GameDealBot [![Build Status](https://travis-ci.org/kckaiwei/GameDealBot.svg?branch=master)](https://travis-ci.org/kckaiwei/GameDealBot) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4a23c46e649543af8e44f4eb5f29cd95)](https://www.codacy.com/app/kckaiwei/GameDealBot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kckaiwei/GameDealBot&amp;utm_campaign=Badge_Grade)
+# GameDealBot [![Build Status](https://travis-ci.org/kckaiwei/GameDealBot.svg?branch=master)](https://travis-ci.org/kckaiwei/GameDealBot) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4a23c46e649543af8e44f4eb5f29cd95)](https://www.codacy.com/app/kckaiwei/GameDealBot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kckaiwei/GameDealBot&amp;utm_campaign=Badge_Grade) [![GitHub release](https://img.shields.io/github/release/kckaiwei/GameDealBot.svg?maxAge=2592000)](https://github.com/kckaiwei/GameDealBot/releases/latest)
 
 ##Description
 

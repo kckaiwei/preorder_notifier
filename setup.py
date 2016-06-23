@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='GameDealBot',
-      version='1.1.1',
+      version='1.3.1',
       description='reddit bot for scraping Game Deals',
 	  author = 'Kevin C.',
 	  author_email = 'kckaiwei@gmail.com',

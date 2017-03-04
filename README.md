@@ -1,18 +1,29 @@
-# GameDealBot [![Build Status](https://travis-ci.org/kckaiwei/GameDealBot.svg?branch=master)](https://travis-ci.org/kckaiwei/GameDealBot) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4a23c46e649543af8e44f4eb5f29cd95)](https://www.codacy.com/app/kckaiwei/GameDealBot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kckaiwei/GameDealBot&amp;utm_campaign=Badge_Grade) [![GitHub release](https://img.shields.io/github/release/kckaiwei/GameDealBot.svg?maxAge=2592000)](https://github.com/kckaiwei/GameDealBot/releases/latest)
+# Preorder notification library
 
 ##Description
 
-GameDealBot is a python bot that utilizes your reddit account and email account to send you text message alerts when there are new deals. A reddit account, and an email account is necessary to use GameDealBot. I host my version of GameDealBot on heroku, utilizing the heroku scheduler to check every 10 minutes for updates, and texts me if there are.
+After much scrambling to get my hands on Nintendo Switch and Breath of the Wild Special Edition preorders,
+I decided to compile all my scripts and bots used to help net me preorders into a library for others to use.
 
 ##Usage
 
-First, you need to configure the config_bot.py. Here, input your reddit username, password, as well as email and password. To address is the email address you want to send messages to. Here, you can use your phone carrier's SMS gateway to send emails to your phone.
+`config.py` is being used to hold login credentials. Since these are hosted as plain text, you HAVE to be very careful
+with where you host this bot. Additionally, I suggest creating an email just for this purpose, as well as a reddit
+account for just this.
 
 If you are using Gmail, it is required that you create an app password for this bot. Here is the relavent article:
 
 https://support.google.com/accounts/answer/185833?hl=en
 
-POST_LIMIT tells the bot how many posts it should scrape in the hot section of the GameDeals subreddit, and SCORE_LIMIT tells the bot how much karma is required before it sends you the submission.
+| Property        | Usage                      | Example text           | Type |
+| --------------- |:--------------------------:| ----------------------:|-----:|
+| REDDIT_USERNAME | username for reddit        | 'username'             | str  |
+| REDDIT_PASSWORD | password for reddit        | 'password'             | str  |
+| EMAIL_USERNAME  | email of notifier bot      | 'example@gmail.com'    | str  |
+| EMAIL_PASSWORD  | password of notifier email | 'password'             | str  |
+| TO_ADDRESS      | email to be notified       | '9999999999@vtext.com' | str  |
+
+You can send messsages to a cell phone through text is you use a SMS gateway for your corresponding carrier.
 
 ##Putting the bot on Heroku
 

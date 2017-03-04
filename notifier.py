@@ -2,7 +2,7 @@ import os, praw, time
 from config import *
 
 
-class Notifier():
+class Notifier(object):
     """Notifier class that compiles all methods and sends notification messages"""
     def __init__(self):
         if not os.path.isfile("config.py"):
@@ -11,13 +11,16 @@ class Notifier():
 
         self._username = REDDIT_USERNAME
         self._password = REDDIT_PASS
+        self._email_username = EMAIL_USERNAME
+        self._email_password = EMAIL_PASSWORD
+        self._to_address = TO_ADDRESS
         self._keyphrase_list = list()
 
         self._user_agent = ("Preorder-notifier 1.0")
         self._reddit_reader = praw.Reddit(user_agent=self._user_agent)
         self._reddit_reader.login(self._username, self._password, disable_warning=True)
 
-    def add_keyphrase(self, keyphrase, subreddit, post_limit):
+    def add_keyphrase(self, keyphrase, subreddit, post_limit=50):
         """
         Adds a keyphrase dictionary set
         :param keyphrase: phrase being searched for
@@ -79,18 +82,23 @@ class Notifier():
 
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
-        server.login(EMAIL_USERNAME, EMAIL_PASSWORD)
+        server.login(self._email_username, self._email_password)
 
         msg = email.mime.text.MIMEText(title, _charset="utf-8")
-        server.sendmail(EMAIL_USERNAME, TO_ADDRESS, msg.as_string())
+        server.sendmail(self._email_password, self._to_address, msg.as_string())
         server.quit()
         print title, "sent!"
 
     def start_continuous(self, interval_sec=60):
-        self._check_keyphrases()
-        time.sleep(interval_sec)
-        pass
+        while True:
+            self._check_keyphrases()
+            time.sleep(interval_sec)
 
     def start_once(self):
         self._check_keyphrases()
         pass
+
+if __name__ == "__main__":
+    n = Notifier
+    n.add_keyphrase('Breath of the Wild Special Edition preorder', ['nintendoswitch', 'zelda'], 50)
+    n.start_once()
